@@ -39,6 +39,13 @@ pipeline {
             }
         }
 
+        stage("API Test"){
+            steps{
+                git 'https://github.com/barreto-lucas/tasks-api-test'
+                bat "mvn test"
+            }
+        }
+
     }
 }
 
